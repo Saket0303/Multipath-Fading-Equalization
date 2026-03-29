@@ -388,7 +388,7 @@ Test : 1,315  unchanged — same samples as Part A
 ├── Neural Network Multipath Fading Equalization.ipynb          # Main notebook (Parts A, B, C)
 ├── README.md                      # This file
 │
-└── outputs/                       # Generated on first run
+└── output/                       # Generated on first run
     ├── eda.png
     ├── partA_training_curves.png
     ├── partA_equalizer_output.png
