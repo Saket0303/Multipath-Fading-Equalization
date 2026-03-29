@@ -1,5 +1,4 @@
-# Neural Network Channel Equalizer
-### Deep Learning for 5G/6G Multipath Fading Equalization
+# Neural Network Multipath Fading Equalization
 
 ---
 
@@ -14,8 +13,6 @@
 7. [Plots](#7-plots)
 8. [Dataset Split](#8-dataset-split)
 9. [Project Structure](#9-project-structure)
-10. [How to Run](#10-how-to-run)
-11. [Requirements](#11-requirements)
 
 ---
 
@@ -388,7 +385,7 @@ Test : 1,315  unchanged — same samples as Part A
 
 ```
 .
-├── equalizer_final.ipynb          # Main notebook (Parts A, B, C)
+├── Neural Network Multipath Fading Equalization.ipynb          # Main notebook (Parts A, B, C)
 ├── README.md                      # This file
 │
 └── outputs/                       # Generated on first run
@@ -399,53 +396,5 @@ Test : 1,315  unchanged — same samples as Part A
     ├── partB_training_curves.png
     ├── partC_training_curves.png
     ├── partC_comparison.png
-    ├── equalizer_joint_best.pt        # Best joint model weights + scaler state
-    ├── equalizer_specialist_QPSK.pt
-    ├── equalizer_specialist_QAM16.pt
-    └── equalizer_specialist_QAM64.pt
-```
 
 ---
-
-## 10. How to Run
-
-### On Kaggle (recommended)
-
-1. Go to [kaggle.com/code](https://www.kaggle.com/code) and create a new notebook
-2. Add dataset: **5G/6G Multipath Fading Equalization Dataset**
-3. Enable GPU: Settings → Accelerator → GPU T4
-4. Upload `equalizer_final.ipynb` and run all cells top to bottom
-
-Update the data path in Cell A2 if your dataset slug differs:
-
-```python
-DATA_PATH = '/kaggle/input/5g6g-multipath-fading-equalization-dataset/equalization_dataset.csv'
-```
-
-### Locally
-
-```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
-
-pip install torch pandas numpy scikit-learn matplotlib openpyxl
-
-jupyter notebook equalizer_final.ipynb
-```
-
-Update `DATA_PATH` in Cell A2 to point to your local CSV or XLSX file.
-
----
-
-## 11. Requirements
-
-| Package | Version tested | Purpose |
-|---|---|---|
-| `torch` | 2.10.0+cu128 | Neural network training and inference |
-| `numpy` | ≥ 1.24 | Array operations and complex number handling |
-| `pandas` | ≥ 2.0 | Data loading and manipulation |
-| `scikit-learn` | ≥ 1.3 | Label encoders, standard scalers, train/test split, metrics |
-| `matplotlib` | ≥ 3.7 | All plots |
-| `openpyxl` | ≥ 3.1 | Reading `.xlsx` files if using the smaller dataset version |
-
-GPU is strongly recommended. Tested on NVIDIA Tesla T4 (Kaggle free tier). CPU-only training will work but will be considerably slower given the 300-epoch training budget.
