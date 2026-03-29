@@ -1,8 +1,6 @@
 # Neural Network Channel Equalizer
 ### Deep Learning for 5G/6G Multipath Fading Equalization
 
-> **Assignment:** Develop a neural network that takes modulation scheme, channel model, SNR, and received signal as input and outputs the equalized (de-noised) signal.
-
 ---
 
 ## Table of Contents
